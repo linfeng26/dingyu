@@ -32,7 +32,7 @@ def show_home(req:Request):
     else:
         pic_name =''
     
-    return template.TemplateResponse(os.path.join(root_path,'templates/home.html'),context={"request":req,"todos":todo_list})
+    return template.TemplateResponse('home.html',context={"request":req,"todos":todo_list})
 
 
 @app.get("/xiaohui")
