@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>数据传输平台</title>
+    </head>
+    
+
+    <body class="bg" style="margin:0 ;padding:0">
+
+
+        <div style="height:100px;width: 100%;background-color: rgb(6, 121, 228); ">
+            <!-- 头部 -->
+            <div style="width: 15%;display: inline-block;">
+                 <img src=xiaohui alt="校徽" style="width:60px;height:60px;margin-left: 10px;">
+                 <img src=yuanhui alt="院徽" style="width:56px;height:56px;margin-left: 10px;margin-bottom: 2px;">                 
+            </div>
+
+            <!-- <div style="width: 16%;display: inline-block; color: rgb(248, 245, 214);text-align: center;">
+                <span style="font-family:FangSong_GB2312; font-size:20px;">北京科技大学</span><br>
+                <span style="font-family:Arial; font-size:12px ;line-height: 50px;">University of Science and Technology Beijing</span><br>
+            </div> -->
+
+            <div style="width: 60%;display: inline-block; color: white;text-align: center;margin-top: 10px;">
+                <span style="font-size:40px ;">数据传输平台</span><br>
+                <span style="font-size:15px ;">北京科技大学-亿智电子科技人工智能联合实验室</span>
+            </div>
+
+            <div style="width: 19%;display: inline-block;text-align: right;font-family:KaiTi ;">
+                <span>制作人：天工小组</span><br>
+                <span>联系我们： 18801261167@163.com</span>
+  
+           </div>
+
+        </div>
+    </body>
+    <body> 
+        
+
+        <div>
+            <!-- 网页内容及功能 -->
+
+            <style type="text/css">
+                .bg{background-image:url("background") ;
+                    background-size: 100%;}
+            </style> 
+            <style>
+                .content {
+                    position: absolute;
+                    margin-left: 5%;
+                    margin-top: 50px;
+                    background-color: rgb(143, 247, 214);
+                    width: 25%;
+                    height: auto;
+                    text-align: center;
+        
+                }
+                .box2 {
+                    position: absolute;
+                    margin-left: 35%;
+                    margin-top: 50px;
+                    background-color: rgb(238, 222, 182);
+                    width: 25%;
+                    height: auto;
+                    text-align: center;
+                }
+                .box3 {
+                    position: absolute;
+                    margin-left: 65%;
+                    margin-top: 50px;
+                    background-color: rgb(125, 174, 243);
+                    width: 25%;
+                    height: auto;
+                    text-align: center;
+                }
+            </style>
+        </div>
+        <div class="content">
+            <a href="http://ta.zwdong.com:8505/"> <font color="black" size="5"> 功能板块一【抽烟检测】</font></a>
+        </div>
+        <p class="box2" >
+            <a  href="http://ta.zwdong.com:8503/"> <font color="black" size="5"> 功能板块二【灭火器检测】</font> </a> 
+            <br />
+        </p>
+        <img src=smoke alt="图片预览【抽烟】" style="position: absolute; width:25%;height:auto;margin-left: 5%;margin-top: 100px;">
+        <img src=fire alt="图片预览【灭火器】" style="position: absolute; width:25%;height:auto;margin-left: 35%;margin-top: 100px;">
+        <p class="box3">
+        <a href="http://ta.zwdong.com:8502/"> <font color="black" size="5" > 功能板块三【工服检测】</font> </a>      
+    </p>
+    <img src=clothes alt="图片预览【工服】" style="position: absolute;width:25%;height:auto;margin-left: 65%;margin-top: 100px; ">
+        {% for todo in todos%}
+        <p>{{ todo }}</p>
+        {% endfor %}
+        </span>
+    
+        </div>
+
+        <div style="width: 580px;height: 400px; display:inline-block;margin-left: 5%;margin-top: 25%">   
+
+            <div style="height: 30px ;">
+
+                <span style="font-size:20px;font-family: FangSong;vertical-align: middle;line-height: 50px;margin-left: 30px;">上传图片文件:</span>
+
+                <form action="/upload_pics/" enctype="multipart/form-data" method="post" style="margin-left: 30px;">
+                    <input name="files" type="file" multiple>
+                    <input type="submit" value="上传图片">
+                </form>
+                <img src=pic_upload alt="图片预览【若是压缩包则不预览】" style="width:400px;height:auto;margin-left: 30px;">
+
+            </div>
+        
+        </div>    
+    </body>
+</html>
